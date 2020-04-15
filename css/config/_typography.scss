@@ -1,0 +1,18 @@
+$base-font-size: 1rem;
+$base-line-height: 1.5;
+$font-xl: $base-font-size * 4; //80
+$font-l: $base-font-size * 1.6; //32
+$font-m: $base-font-size * 1.2; //24
+$font-s: $base-font-size ;  //20
+
+//font
+$font-title: "Andale Mono", AndaleMono, monospace;
+// $font-Neue: Helvetica Neue, Regular;
+// $font-times: Times, Regular;
+html {
+  font-size: 20px;
+  line-height: $base-line-height;
+  // -webkit-font-smoothing: antialiased
+  // -moz-osx-font-smoothing: grayscale
+  font-family: Andale Mono, Roboto, PingFang TC, sans-serif;
+}

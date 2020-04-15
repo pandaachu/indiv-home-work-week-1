@@ -1,0 +1,9 @@
+.resume{
+  max-width: 1200px;
+  margin: 0 auto;
+  &__title{
+    font-size: $font-xl ;
+    font-family: $font-title;
+    line-height: 90px;
+  }
+}
