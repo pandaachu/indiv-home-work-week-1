@@ -68,7 +68,11 @@
   }
   .skill-wrap{
     width: 100%;
-    background-color: $lightBlue;
+    // background-color: $lightBlue;
+    background: $lightBlue ;
     color: #fff;
+    .skill{
+      background-color: $darkBlue;
+    }
   }
 }

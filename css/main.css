@@ -854,5 +854,7 @@ html {
       margin-bottom: 1.2rem; }
   .resume .skill-wrap {
     width: 100%;
-    background-color: #96A9C4;
+    background: #96A9C4;
     color: #fff; }
+    .resume .skill-wrap .skill {
+      background-color: #415165; }
