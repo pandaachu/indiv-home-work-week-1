@@ -1,277 +1,49 @@
 @charset "UTF-8";
-/*!
- * ress.css • v2.0.4
- * MIT License
- * github.com/filipelinhares/ress
- */
-/* # =================================================================
-   # Global selectors
-   # ================================================================= */
-html {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  /* Prevent adjustments of font size after orientation changes in iOS */
-  word-break: normal;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4; }
-
-*,
-::before,
-::after {
-  background-repeat: no-repeat;
-  /* Set `background-repeat: no-repeat` to all elements and pseudo elements */
-  -webkit-box-sizing: inherit;
-  box-sizing: inherit; }
-
-::before,
-::after {
-  text-decoration: inherit;
-  /* Inherit text-decoration and vertical align to ::before and ::after pseudo elements */
-  vertical-align: inherit; }
-
-* {
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
   padding: 0;
-  /* Reset `padding` and `margin` of all elements */
-  margin: 0; }
-
-/* # =================================================================
-   # General elements
-   # ================================================================= */
-hr {
-  overflow: visible;
-  /* Show the overflow in Edge and IE */
-  height: 0;
-  /* Add the correct box sizing in Firefox */ }
-
-details,
-main {
-  display: block;
-  /* Render the `main` element consistently in IE. */ }
-
-summary {
-  display: list-item;
-  /* Add the correct display in all browsers */ }
-
-small {
-  font-size: 80%;
-  /* Set font-size to 80% in `small` elements */ }
-
-[hidden] {
-  display: none;
-  /* Add the correct display in IE */ }
-
-abbr[title] {
-  border-bottom: none;
-  /* Remove the bottom border in Chrome 57 */
-  /* Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari */
-  text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
-  text-decoration: underline dotted; }
-
-a {
-  background-color: transparent;
-  /* Remove the gray background on active links in IE 10 */ }
-
-a:active,
-a:hover {
-  outline-width: 0;
-  /* Remove the outline when hovering in all browsers */ }
-
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-  /* Specify the font family of code elements */ }
-
-pre {
-  font-size: 1em;
-  /* Correct the odd `em` font sizing in all browsers */ }
-
-b,
-strong {
-  font-weight: bolder;
-  /* Add the correct font weight in Chrome, Edge, and Safari */ }
-
-/* https://gist.github.com/unruthless/413930 */
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline; }
-
-sub {
-  bottom: -0.25em; }
-
-sup {
-  top: -0.5em; }
-
-/* # =================================================================
-   # Forms
-   # ================================================================= */
-input {
-  border-radius: 0; }
-
-/* Replace pointer cursor in disabled elements */
-[disabled] {
-  cursor: default; }
-
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-  /* Correct the cursor style of increment and decrement buttons in Chrome */ }
-
-[type="search"] {
-  -webkit-appearance: textfield;
-  /* Correct the odd appearance in Chrome and Safari */
-  outline-offset: -2px;
-  /* Correct the outline style in Safari */ }
-
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-  /* Remove the inner padding in Chrome and Safari on macOS */ }
-
-textarea {
-  overflow: auto;
-  /* Internet Explorer 11+ */
-  resize: vertical;
-  /* Specify textarea resizability */ }
-
-button,
-input,
-optgroup,
-select,
-textarea {
-  font: inherit;
-  /* Specify font inheritance of form elements */ }
-
-optgroup {
-  font-weight: bold;
-  /* Restore the font weight unset by the previous rule */ }
-
-button {
-  overflow: visible;
-  /* Address `overflow` set to `hidden` in IE 8/9/10/11 */ }
-
-button,
-select {
-  text-transform: none;
-  /* Firefox 40+, Internet Explorer 11- */ }
-
-/* Apply cursor pointer to button elements */
-button,
-[type="button"],
-[type="reset"],
-[type="submit"],
-[role="button"] {
-  cursor: pointer;
-  color: inherit; }
-
-/* Remove inner padding and border in Firefox 4+ */
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-  border-style: none;
-  padding: 0; }
-
-/* Replace focus style removed in the border reset above */
-button:-moz-focusring,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-  outline: 1px dotted ButtonText; }
-
-button,
-html [type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button;
-  /* Correct the inability to style clickable types in iOS */ }
-
-/* Remove the default button styling in all browsers */
-button,
-input,
-select,
-textarea {
-  background-color: transparent;
-  border-style: none; }
-
-/* Style select like a standard input */
-select {
-  -moz-appearance: none;
-  /* Firefox 36+ */
-  -webkit-appearance: none;
-  /* Chrome 41+ */ }
-
-select::-ms-expand {
-  display: none;
-  /* Internet Explorer 11+ */ }
-
-select::-ms-value {
-  color: currentColor;
-  /* Internet Explorer 11+ */ }
-
-legend {
   border: 0;
-  /* Correct `color` not being inherited in IE 8/9/10/11 */
-  color: inherit;
-  /* Correct the color inheritance from `fieldset` elements in IE */
-  display: table;
-  /* Correct the text wrapping in Edge and IE */
-  max-width: 100%;
-  /* Correct the text wrapping in Edge and IE */
-  white-space: normal;
-  /* Correct the text wrapping in Edge and IE */
-  max-width: 100%;
-  /* Correct the text wrapping in Edge 18- and IE */ }
-
-::-webkit-file-upload-button {
-  /* Correct the inability to style clickable types in iOS and Safari */
-  -webkit-appearance: button;
-  color: inherit;
-  font: inherit;
-  /* Change font properties to `inherit` in Chrome and Safari */ }
-
-/* # =================================================================
-   # Specify media element style
-   # ================================================================= */
-img {
-  border-style: none;
-  /* Remove border when inside `a` element in IE 8/9/10 */ }
-
-/* Add the correct vertical alignment in Chrome, Firefox, and Opera */
-progress {
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
   vertical-align: baseline; }
 
-svg:not([fill]) {
-  fill: currentColor; }
+/* remember to define focus styles! */
+:focus {
+  outline: 0; }
 
-/* # =================================================================
-   # Accessibility
-   # ================================================================= */
-/* Hide content from screens but not screenreaders */
-@media screen {
-  [hidden~="screen"] {
-    display: inherit; }
-  [hidden~="screen"]:not(:active):not(:focus):not(:target) {
-    position: absolute !important;
-    clip: rect(0 0 0 0) !important; } }
+body {
+  line-height: 1;
+  color: black;
+  background: white; }
 
-/* Specify the progress cursor of updating elements */
-[aria-busy="true"] {
-  cursor: progress; }
+ol, ul {
+  list-style: none; }
 
-/* Specify the pointer cursor of trigger elements */
-[aria-controls] {
-  cursor: pointer; }
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: separate;
+  border-spacing: 0; }
 
-/* Specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */
-[aria-disabled] {
-  cursor: default; }
+caption, th, td {
+  text-align: left;
+  font-weight: normal; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: ""; }
+
+blockquote, q {
+  quotes: "" ""; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -299,22 +71,425 @@ img {
 html {
   font-size: 20px;
   line-height: 1.5;
-  font-family: Andale Mono, Roboto, PingFang TC, sans-serif; }
+  font-family: "Microsoft JhengHei","微軟正黑體",sans-serif; }
 
 .col-container {
   max-width: 1200px;
   margin-right: auto;
   margin-left: auto; }
 
-.col-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between; }
+.h-flex-row {
+  -ms-flex-direction: row !important;
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+  flex-direction: row !important; }
+
+.h-flex-column {
+  -ms-flex-direction: column !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+  flex-direction: column !important; }
+
+.h-flex-row-reverse {
+  -ms-flex-direction: row-reverse !important;
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: reverse !important;
+  flex-direction: row-reverse !important; }
+
+.h-flex-column-reverse {
+  -ms-flex-direction: column-reverse !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: reverse !important;
+  flex-direction: column-reverse !important; }
+
+.h-flex-wrap {
+  -ms-flex-wrap: wrap !important;
+  flex-wrap: wrap !important; }
+
+.h-flex-nowrap {
+  -ms-flex-wrap: nowrap !important;
+  flex-wrap: nowrap !important; }
+
+.h-flex-wrap-reverse {
+  -ms-flex-wrap: wrap-reverse !important;
+  flex-wrap: wrap-reverse !important; }
+
+.h-flex-fill {
+  -ms-flex: 1 1 auto !important;
+  -webkit-box-flex: 1 !important;
+  flex: 1 1 auto !important; }
+
+.h-flex-grow-0 {
+  -ms-flex-positive: 0 !important;
+  -webkit-box-flex: 0 !important;
+  flex-grow: 0 !important; }
+
+.h-flex-grow-1 {
+  -ms-flex-positive: 1 !important;
+  -webkit-box-flex: 1 !important;
+  flex-grow: 1 !important; }
+
+.h-flex-shrink-0 {
+  -ms-flex-negative: 0 !important;
+  flex-shrink: 0 !important; }
+
+.h-flex-shrink-1 {
+  -ms-flex-negative: 1 !important;
+  flex-shrink: 1 !important; }
+
+.h-justify-content-start {
+  -ms-flex-pack: start !important;
+  -webkit-box-pack: start !important;
+  justify-content: flex-start !important; }
+
+.h-justify-content-end {
+  -ms-flex-pack: end !important;
+  -webkit-box-pack: end !important;
+  justify-content: flex-end !important; }
+
+.h-justify-content-center {
+  -ms-flex-pack: center !important;
+  -webkit-box-pack: center !important;
+  justify-content: center !important; }
+
+.h-justify-content-between {
+  -ms-flex-pack: justify !important;
+  -webkit-box-pack: justify !important;
+  justify-content: space-between !important; }
+
+.h-justify-content-around {
+  -ms-flex-pack: distribute !important;
+  justify-content: space-around !important; }
+
+.h-align-items-start {
+  -ms-flex-align: start !important;
+  -webkit-box-align: start !important;
+  align-items: flex-start !important; }
+
+.h-align-items-end {
+  -ms-flex-align: end !important;
+  -webkit-box-align: end !important;
+  align-items: flex-end !important; }
+
+.h-align-items-center {
+  -ms-flex-align: center !important;
+  -webkit-box-align: center !important;
+  align-items: center !important; }
+
+.h-align-items-baseline {
+  -ms-flex-align: baseline !important;
+  -webkit-box-align: baseline !important;
+  align-items: baseline !important; }
+
+.h-align-items-stretch {
+  -ms-flex-align: stretch !important;
+  -webkit-box-align: stretch !important;
+  align-items: stretch !important; }
+
+.h-align-content-start {
+  -ms-flex-line-pack: start !important;
+  align-content: flex-start !important; }
+
+.h-align-content-end {
+  -ms-flex-line-pack: end !important;
+  align-content: flex-end !important; }
+
+.h-align-content-center {
+  -ms-flex-line-pack: center !important;
+  align-content: center !important; }
+
+.h-align-content-between {
+  -ms-flex-line-pack: justify !important;
+  align-content: space-between !important; }
+
+.h-align-content-around {
+  -ms-flex-line-pack: distribute !important;
+  align-content: space-around !important; }
+
+.h-align-content-stretch {
+  -ms-flex-line-pack: stretch !important;
+  align-content: stretch !important; }
+
+.h-align-self-auto {
+  -ms-flex-item-align: auto !important;
+  -ms-grid-row-align: auto !important;
+  align-self: auto !important; }
+
+.h-align-self-start {
+  -ms-flex-item-align: start !important;
+  align-self: flex-start !important; }
+
+.h-align-self-end {
+  -ms-flex-item-align: end !important;
+  align-self: flex-end !important; }
+
+.h-align-self-center {
+  -ms-flex-item-align: center !important;
+  -ms-grid-row-align: center !important;
+  align-self: center !important; }
+
+.h-align-self-baseline {
+  -ms-flex-item-align: baseline !important;
+  align-self: baseline !important; }
+
+.h-align-self-stretch {
+  -ms-flex-item-align: stretch !important;
+  -ms-grid-row-align: stretch !important;
+  align-self: stretch !important; }
+
+@media (max-width: 1023px) {
+  .h-flex-lg-row {
+    -ms-flex-direction: row !important;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+    flex-direction: row !important; }
+  .h-flex-lg-column {
+    -ms-flex-direction: column !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+    flex-direction: column !important; }
+  .h-flex-lg-row-reverse {
+    -ms-flex-direction: row-reverse !important;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: reverse !important;
+    flex-direction: row-reverse !important; }
+  .h-flex-lg-column-reverse {
+    -ms-flex-direction: column-reverse !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: reverse !important;
+    flex-direction: column-reverse !important; }
+  .h-flex-lg-wrap {
+    -ms-flex-wrap: wrap !important;
+    flex-wrap: wrap !important; }
+  .h-flex-lg-nowrap {
+    -ms-flex-wrap: nowrap !important;
+    flex-wrap: nowrap !important; }
+  .h-flex-lg-wrap-reverse {
+    -ms-flex-wrap: wrap-reverse !important;
+    flex-wrap: wrap-reverse !important; }
+  .h-flex-lg-fill {
+    -ms-flex: 1 1 auto !important;
+    -webkit-box-flex: 1 !important;
+    flex: 1 1 auto !important; }
+  .h-flex-lg-grow-0 {
+    -ms-flex-positive: 0 !important;
+    -webkit-box-flex: 0 !important;
+    flex-grow: 0 !important; }
+  .h-flex-lg-grow-1 {
+    -ms-flex-positive: 1 !important;
+    -webkit-box-flex: 1 !important;
+    flex-grow: 1 !important; }
+  .h-flex-lg-shrink-0 {
+    -ms-flex-negative: 0 !important;
+    flex-shrink: 0 !important; }
+  .h-flex-lg-shrink-1 {
+    -ms-flex-negative: 1 !important;
+    flex-shrink: 1 !important; }
+  .h-justify-content-lg-start {
+    -ms-flex-pack: start !important;
+    -webkit-box-pack: start !important;
+    justify-content: flex-start !important; }
+  .h-justify-content-lg-end {
+    -ms-flex-pack: end !important;
+    -webkit-box-pack: end !important;
+    justify-content: flex-end !important; }
+  .h-justify-content-lg-center {
+    -ms-flex-pack: center !important;
+    -webkit-box-pack: center !important;
+    justify-content: center !important; }
+  .h-justify-content-lg-between {
+    -ms-flex-pack: justify !important;
+    -webkit-box-pack: justify !important;
+    justify-content: space-between !important; }
+  .h-justify-content-lg-around {
+    -ms-flex-pack: distribute !important;
+    justify-content: space-around !important; }
+  .h-align-items-lg-start {
+    -ms-flex-align: start !important;
+    -webkit-box-align: start !important;
+    align-items: flex-start !important; }
+  .h-align-items-lg-end {
+    -ms-flex-align: end !important;
+    -webkit-box-align: end !important;
+    align-items: flex-end !important; }
+  .h-align-items-lg-center {
+    -ms-flex-align: center !important;
+    -webkit-box-align: center !important;
+    align-items: center !important; }
+  .h-align-items-lg-baseline {
+    -ms-flex-align: baseline !important;
+    -webkit-box-align: baseline !important;
+    align-items: baseline !important; }
+  .h-align-items-lg-stretch {
+    -ms-flex-align: stretch !important;
+    -webkit-box-align: stretch !important;
+    align-items: stretch !important; }
+  .h-align-content-lg-start {
+    -ms-flex-line-pack: start !important;
+    align-content: flex-start !important; }
+  .h-align-content-lg-end {
+    -ms-flex-line-pack: end !important;
+    align-content: flex-end !important; }
+  .h-align-content-lg-center {
+    -ms-flex-line-pack: center !important;
+    align-content: center !important; }
+  .h-align-content-lg-between {
+    -ms-flex-line-pack: justify !important;
+    align-content: space-between !important; }
+  .h-align-content-lg-around {
+    -ms-flex-line-pack: distribute !important;
+    align-content: space-around !important; }
+  .h-align-content-lg-stretch {
+    -ms-flex-line-pack: stretch !important;
+    align-content: stretch !important; }
+  .h-align-self-lg-auto {
+    -ms-flex-item-align: auto !important;
+    -ms-grid-row-align: auto !important;
+    align-self: auto !important; }
+  .h-align-self-lg-start {
+    -ms-flex-item-align: start !important;
+    align-self: flex-start !important; }
+  .h-align-self-lg-end {
+    -ms-flex-item-align: end !important;
+    align-self: flex-end !important; }
+  .h-align-self-lg-center {
+    -ms-flex-item-align: center !important;
+    -ms-grid-row-align: center !important;
+    align-self: center !important; }
+  .h-align-self-lg-baseline {
+    -ms-flex-item-align: baseline !important;
+    align-self: baseline !important; }
+  .h-align-self-lg-stretch {
+    -ms-flex-item-align: stretch !important;
+    -ms-grid-row-align: stretch !important;
+    align-self: stretch !important; } }
+
+@media (max-width: 767px) {
+  .h-flex-md-row {
+    -ms-flex-direction: row !important;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+    flex-direction: row !important; }
+  .h-flex-md-column {
+    -ms-flex-direction: column !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+    flex-direction: column !important; }
+  .h-flex-md-row-reverse {
+    -ms-flex-direction: row-reverse !important;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: reverse !important;
+    flex-direction: row-reverse !important; }
+  .h-flex-md-column-reverse {
+    -ms-flex-direction: column-reverse !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: reverse !important;
+    flex-direction: column-reverse !important; }
+  .h-flex-md-wrap {
+    -ms-flex-wrap: wrap !important;
+    flex-wrap: wrap !important; }
+  .h-flex-md-nowrap {
+    -ms-flex-wrap: nowrap !important;
+    flex-wrap: nowrap !important; }
+  .h-flex-md-wrap-reverse {
+    -ms-flex-wrap: wrap-reverse !important;
+    flex-wrap: wrap-reverse !important; }
+  .h-flex-md-fill {
+    -ms-flex: 1 1 auto !important;
+    -webkit-box-flex: 1 !important;
+    flex: 1 1 auto !important; }
+  .h-flex-md-grow-0 {
+    -ms-flex-positive: 0 !important;
+    -webkit-box-flex: 0 !important;
+    flex-grow: 0 !important; }
+  .h-flex-md-grow-1 {
+    -ms-flex-positive: 1 !important;
+    -webkit-box-flex: 1 !important;
+    flex-grow: 1 !important; }
+  .h-flex-md-shrink-0 {
+    -ms-flex-negative: 0 !important;
+    flex-shrink: 0 !important; }
+  .h-flex-md-shrink-1 {
+    -ms-flex-negative: 1 !important;
+    flex-shrink: 1 !important; }
+  .h-justify-content-md-start {
+    -ms-flex-pack: start !important;
+    -webkit-box-pack: start !important;
+    justify-content: flex-start !important; }
+  .h-justify-content-md-end {
+    -ms-flex-pack: end !important;
+    -webkit-box-pack: end !important;
+    justify-content: flex-end !important; }
+  .h-justify-content-md-center {
+    -ms-flex-pack: center !important;
+    -webkit-box-pack: center !important;
+    justify-content: center !important; }
+  .h-justify-content-md-between {
+    -ms-flex-pack: justify !important;
+    -webkit-box-pack: justify !important;
+    justify-content: space-between !important; }
+  .h-justify-content-md-around {
+    -ms-flex-pack: distribute !important;
+    justify-content: space-around !important; }
+  .h-align-items-md-start {
+    -ms-flex-align: start !important;
+    -webkit-box-align: start !important;
+    align-items: flex-start !important; }
+  .h-align-items-md-end {
+    -ms-flex-align: end !important;
+    -webkit-box-align: end !important;
+    align-items: flex-end !important; }
+  .h-align-items-md-center {
+    -ms-flex-align: center !important;
+    -webkit-box-align: center !important;
+    align-items: center !important; }
+  .h-align-items-md-baseline {
+    -ms-flex-align: baseline !important;
+    -webkit-box-align: baseline !important;
+    align-items: baseline !important; }
+  .h-align-items-md-stretch {
+    -ms-flex-align: stretch !important;
+    -webkit-box-align: stretch !important;
+    align-items: stretch !important; }
+  .h-align-content-md-start {
+    -ms-flex-line-pack: start !important;
+    align-content: flex-start !important; }
+  .h-align-content-md-end {
+    -ms-flex-line-pack: end !important;
+    align-content: flex-end !important; }
+  .h-align-content-md-center {
+    -ms-flex-line-pack: center !important;
+    align-content: center !important; }
+  .h-align-content-md-between {
+    -ms-flex-line-pack: justify !important;
+    align-content: space-between !important; }
+  .h-align-content-md-around {
+    -ms-flex-line-pack: distribute !important;
+    align-content: space-around !important; }
+  .h-align-content-md-stretch {
+    -ms-flex-line-pack: stretch !important;
+    align-content: stretch !important; }
+  .h-align-self-md-auto {
+    -ms-flex-item-align: auto !important;
+    -ms-grid-row-align: auto !important;
+    align-self: auto !important; }
+  .h-align-self-md-start {
+    -ms-flex-item-align: start !important;
+    align-self: flex-start !important; }
+  .h-align-self-md-end {
+    -ms-flex-item-align: end !important;
+    align-self: flex-end !important; }
+  .h-align-self-md-center {
+    -ms-flex-item-align: center !important;
+    -ms-grid-row-align: center !important;
+    align-self: center !important; }
+  .h-align-self-md-baseline {
+    -ms-flex-item-align: baseline !important;
+    align-self: baseline !important; }
+  .h-align-self-md-stretch {
+    -ms-flex-item-align: stretch !important;
+    -ms-grid-row-align: stretch !important;
+    align-self: stretch !important; } }
 
 .h-m-0 {
   margin: 0 !important; }
@@ -350,16 +525,16 @@ html {
   margin: 0.8rem !important; }
 
 .h-mt-2, .h-my-2 {
-  margin-top: 2.4rem !important; }
+  margin-top: 0.8rem !important; }
 
 .h-mr-2, .h-mx-2 {
-  margin-right: 2.4rem !important; }
+  margin-right: 0.8rem !important; }
 
 .h-mb-2, .h-my-2 {
-  margin-bottom: 2.4rem !important; }
+  margin-bottom: 0.8rem !important; }
 
 .h-ml-2, .h-mx-2 {
-  margin-left: 2.4rem !important; }
+  margin-left: 0.8rem !important; }
 
 .h-m-3 {
   margin: 1.1rem !important; }
@@ -455,16 +630,16 @@ html {
   padding: 0.8rem !important; }
 
 .h-pt-2, .h-py-2 {
-  padding-top: 2.4rem !important; }
+  padding-top: 0.8rem !important; }
 
 .h-pr-2, .h-px-2 {
-  padding-right: 2.4rem !important; }
+  padding-right: 0.8rem !important; }
 
 .h-pb-2, .h-py-2 {
-  padding-bottom: 2.4rem !important; }
+  padding-bottom: 0.8rem !important; }
 
 .h-pl-2, .h-px-2 {
-  padding-left: 2.4rem !important; }
+  padding-left: 0.8rem !important; }
 
 .h-p-3 {
   padding: 1.1rem !important; }
@@ -630,9 +805,54 @@ html {
   border-bottom: 2px #000 solid; }
 
 .resume {
-  max-width: 1200px;
+  width: 100%;
   margin: 0 auto; }
   .resume__title {
     font-size: 4rem;
     font-family: "Andale Mono", AndaleMono, monospace;
     line-height: 90px; }
+  .resume__item__title {
+    font-weight: bold;
+    display: block;
+    border-bottom: 1px solid #000; }
+    .resume__item__title h2 {
+      font-size: 1.6rem;
+      line-height: 45px; }
+    .resume__item__title span {
+      font-size: 1.2rem;
+      color: #A00404; }
+  .resume__item__bullet-point {
+    width: 0.8rem;
+    height: 0.8rem;
+    margin-top: 0.5rem;
+    border-radius: 999em;
+    background-color: #96A9C4;
+    position: relative; }
+  .resume__item__bullet-point--bottom-line:after {
+    content: '';
+    position: absolute;
+    margin: auto;
+    right: 0;
+    left: 0;
+    height: 1.8rem;
+    width: 1px;
+    background-color: #96A9C4; }
+  .resume__item__bullet-point--top-line:after {
+    content: '';
+    position: absolute;
+    margin: auto;
+    right: 0;
+    left: 0;
+    top: -1.8rem;
+    height: 1.8rem;
+    width: 1px;
+    background-color: #96A9C4; }
+  .resume__item__text {
+    font-size: 1.2rem;
+    line-height: 1.8rem; }
+    .resume__item__text p:nth-child(odd) {
+      margin-bottom: 1.2rem; }
+  .resume .skill-wrap {
+    width: 100%;
+    background-color: #96A9C4;
+    color: #fff; }

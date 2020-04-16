@@ -1,9 +1,74 @@
-.resume{
-  max-width: 1200px;
+.resume {
+  width: 100%;
   margin: 0 auto;
-  &__title{
-    font-size: $font-xl ;
+  &__title {
+    font-size: $font-xl;
     font-family: $font-title;
     line-height: 90px;
+  }
+  &__item {
+    &__title {
+      font-weight: bold;
+      // padding-bottom: 0.4rem;
+      // margin-bottom: 0.8rem;
+      display: block;
+      border-bottom: 1px solid #000;
+      h2 {
+        font-size: $font-l;
+        line-height: 45px;
+        // margin-right: 0.8rem;
+      }
+      span {
+        font-size: $font-m;
+        color: $deepRed;
+      }
+    }
+    &__bullet-point {
+      width: 0.8rem;
+      height: 0.8rem;
+      margin-top: 0.5rem;
+      border-radius: 999em;
+      background-color: $lightBlue;
+      position:relative;
+    }
+    &__bullet-point--bottom-line{
+      &:after{
+        content:'' ;
+        position: absolute;
+        margin:auto;
+        right:0 ;
+        left:0 ;
+        height:1.8rem;
+        width:1px ;
+        background-color: $lightBlue;
+        }
+    }
+    &__bullet-point--top-line{
+      &:after{
+        content:'' ;
+        position: absolute;
+        margin:auto;
+        right:0 ;
+        left:0 ;
+        top: -1.8rem;
+        height:1.8rem;
+        width:1px ;
+        background-color: $lightBlue;
+        }
+    }
+    &__text {
+      font-size: $font-m;
+      line-height: 1.8rem;
+      p {
+        &:nth-child(odd) {
+          margin-bottom: 1.2rem;
+        }
+      }
+    }
+  }
+  .skill-wrap{
+    width: 100%;
+    background-color: $lightBlue;
+    color: #fff;
   }
 }
