@@ -2,7 +2,6 @@
   box-sizing: border-box;
 }
 html {
-  transition: 0.5s all;
   color: #000;
 }
 // body{
@@ -13,12 +12,11 @@ svg {
 }
 a {
   text-decoration: none;
-  color: $darkBlue;
-}
-input:focus {
-  outline: none;
+  // color: $darkBlue;
 }
 
 img {
   max-width: 100%;
+  height: auto;
+  display: block;
 }

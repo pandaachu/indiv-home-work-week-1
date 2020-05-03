@@ -1,78 +1,108 @@
 .resume {
-  width: 100%;
-  margin: 0 auto;
-  &__title {
-    font-size: $font-xl;
-    font-family: $font-title;
-    line-height: 90px;
-  }
-  &__item {
     &__title {
-      font-weight: bold;
-      // padding-bottom: 0.4rem;
-      // margin-bottom: 0.8rem;
-      display: block;
-      border-bottom: 1px solid #000;
-      h2 {
-        font-size: $font-l;
-        line-height: 45px;
-        // margin-right: 0.8rem;
-      }
-      span {
-        font-size: $font-m;
-        color: $deepRed;
-      }
+        font-size: $font-xl;
+        font-family: $font-title;
+        line-height: 90px;
     }
-    &__bullet-point {
-      width: 0.8rem;
-      height: 0.8rem;
-      margin-top: 0.5rem;
-      border-radius: 999em;
-      background-color: $lightBlue;
-      position:relative;
-    }
-    &__bullet-point--bottom-line{
-      &:after{
-        content:'' ;
-        position: absolute;
-        margin:auto;
-        right:0 ;
-        left:0 ;
-        height:1.8rem;
-        width:1px ;
-        background-color: $lightBlue;
+
+    &__item {
+        &__subTitle {
+            font-size: $font-l;
+            line-height: 45px;
+            font-weight: bold;
+            span {
+                font-size: $font-m;
+                font-family: 'Roboto', sans-serif;
+                color: $deepRed;
+            }
+            &--blackLine {
+                border-bottom: 1px #000 solid;
+            }
+            &--whiteLine {
+                border-bottom: 1px #fff solid;
+            }
+        }
+
+        &__bulletPoint {
+            display: inline-block;
+            width: 0.8rem;
+            height: 0.8rem;
+            margin-top: 0.5rem;
+            border-radius: 999em;
+            background-color: $lightBlue;
+            position: relative;
+        }
+        &__bulletPoint--line {
+            &:after {
+                content: '';
+                position: absolute;
+                margin: auto;
+                right: 0;
+                left: 0;
+                height: 4rem;
+                width: 1px;
+                background-color: $lightBlue;
+            }
+        }
+        &__content {
+            &--borderWLeft {
+                border-left: #fff 1px solid;
+            }
+            &--borderBLeft {
+                border-left: $lightBlue 1px solid;
+            }
+        }
+        &__text {
+            font-size: $font-m;
+            line-height: 1.8rem;
+            &--bold {
+                font-weight: bold;
+            }
+            &--width{
+              width: 642px;
+            }
+        }
+        &--bg::after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            background-color: $lightBlue;
+            height: 360px;
+            width: 100%;
+            top: 67px;
+        }
+        &--darkBg {
+            background-color: $darkBlue;
+        }
+        &__skill {
+            color: #fff;
+            padding-bottom: 56px;
+            padding-right: 102px;
+            padding-left: 102px;
+            span {
+                color: #fff;
+            }
+            .resume__item__subTitle {
+                text-align: center;
+                margin-bottom: 40px;
+            }
+            .resume__item__content {
+                width: 250px;
+                // width: 217px;
+                margin: 0 auto;
+            }
+        }
+        &__experience {
+            p {
+                font-size: 20px;
+            }
+        }
+        &__contact{
+          text-align: center;
+          color: #fff;
+          a{
+            color: #fff;
+          }
         }
     }
-    &__bullet-point--top-line{
-      &:after{
-        content:'' ;
-        position: absolute;
-        margin:auto;
-        right:0 ;
-        left:0 ;
-        top: -1.8rem;
-        height:1.8rem;
-        width:1px ;
-        background-color: $lightBlue;
-        }
-    }
-    &__text {
-      font-size: $font-m;
-      line-height: 1.8rem;
-      p {
-        &:nth-child(odd) {
-          margin-bottom: 1.2rem;
-        }
-      }
-    }
-  }
-  .skill-wrap{
-    width: 100%;
-    // background-color: $lightBlue;
-    background: $lightBlue ;
-    color: #fff;
-    .skill{
-      background-color: $darkBlue;
-    }
-  }
 }
