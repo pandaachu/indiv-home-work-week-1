@@ -12,7 +12,7 @@
             font-weight: bold;
             span {
                 font-size: $font-m;
-                font-family: 'Roboto', sans-serif;
+                // font-family: 'Roboto', sans-serif;
                 color: $deepRed;
             }
             &--blackLine {
@@ -31,19 +31,20 @@
             border-radius: 999em;
             background-color: $lightBlue;
             position: relative;
-        }
-        &__bulletPoint--line {
-            &:after {
-                content: '';
-                position: absolute;
-                margin: auto;
-                right: 0;
-                left: 0;
-                height: 4rem;
-                width: 1px;
-                background-color: $lightBlue;
+            &--line {
+                &:after {
+                    content: '';
+                    position: absolute;
+                    margin: auto;
+                    right: 0;
+                    left: 0;
+                    height: 4rem;
+                    width: 1px;
+                    background-color: $lightBlue;
+                }
             }
         }
+
         &__content {
             &--borderWLeft {
                 border-left: #fff 1px solid;
@@ -58,8 +59,8 @@
             &--bold {
                 font-weight: bold;
             }
-            &--width{
-              width: 642px;
+            &--width {
+                width: 642px;
             }
         }
         &--bg::after {
@@ -87,8 +88,8 @@
                 margin-bottom: 40px;
             }
             .resume__item__content {
-                width: 250px;
-                // width: 217px;
+                // width: 250px;
+                width: 217px;
                 margin: 0 auto;
             }
         }
@@ -97,12 +98,12 @@
                 font-size: 20px;
             }
         }
-        &__contact{
-          text-align: center;
-          color: #fff;
-          a{
+        &__contact {
+            text-align: center;
             color: #fff;
-          }
+           span, a{
+            color: #fff;
+           }
         }
     }
 }

@@ -66,7 +66,7 @@ img {
 html {
   font-size: 20px;
   line-height: 1.5;
-  font-family: "Microsoft JhengHei","微軟正黑體",sans-serif; }
+  font-family: Roboto,"Microsoft JhengHei","微軟正黑體",sans-serif; }
 
 .col-container {
   max-width: 1200px;
@@ -840,7 +840,6 @@ html {
   font-weight: bold; }
   .resume__item__subTitle span {
     font-size: 1.2rem;
-    font-family: 'Roboto', sans-serif;
     color: #A00404; }
   .resume__item__subTitle--blackLine {
     border-bottom: 1px #000 solid; }
@@ -855,16 +854,15 @@ html {
   border-radius: 999em;
   background-color: #96A9C4;
   position: relative; }
-
-.resume__item__bulletPoint--line:after {
-  content: '';
-  position: absolute;
-  margin: auto;
-  right: 0;
-  left: 0;
-  height: 4rem;
-  width: 1px;
-  background-color: #96A9C4; }
+  .resume__item__bulletPoint--line:after {
+    content: '';
+    position: absolute;
+    margin: auto;
+    right: 0;
+    left: 0;
+    height: 4rem;
+    width: 1px;
+    background-color: #96A9C4; }
 
 .resume__item__content--borderWLeft {
   border-left: #fff 1px solid; }
@@ -903,7 +901,7 @@ html {
     text-align: center;
     margin-bottom: 40px; }
   .resume__item__skill .resume__item__content {
-    width: 250px;
+    width: 217px;
     margin: 0 auto; }
 
 .resume__item__experience p {
@@ -912,5 +910,5 @@ html {
 .resume__item__contact {
   text-align: center;
   color: #fff; }
-  .resume__item__contact a {
+  .resume__item__contact span, .resume__item__contact a {
     color: #fff; }
